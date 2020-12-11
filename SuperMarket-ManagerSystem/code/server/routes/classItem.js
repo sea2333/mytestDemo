@@ -9,24 +9,7 @@ router.all('*', (req, res, next) => {
     next();
 })
 
-//////////////////////////////////////////////////////// 合法性验证
-// // 密钥
-// const secretKey = 'junnima';
-// // 引入express-jwt
-// const expressJwt = require('express-jwt');
-// // 验证token合法性
-// router.use(expressJwt({
-// 	secret: secretKey
-// }).unless({
-// 	path: ['/login/check']	//拦截除此之外的地址
-// }));
-// // 路由拦截器
-// router.use(function(err, req, res, next) {
-// 	if(err.name === 'UnauthorizedError'){
-// 		res.status(401).send('token不合法!');
-// 	}
-// })
-////////////////////////////////////////////////////// 合法性验证结束
+
 
 router.get('/showClassItem', (req, res) => {
 	let sql = `select theclass from goodsclass`;
